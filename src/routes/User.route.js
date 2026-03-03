@@ -12,7 +12,7 @@ router.post('/login',loginuser)
 
 //Protected Route Example
 router.get('/home',authMiddleware,(req,res)=>{
-    res.json({message:"home",user:req.user.username})
+    res.status(200).json({ message: `Welcome ${req.user.username}!` })
 })
 
 module.exports=router
